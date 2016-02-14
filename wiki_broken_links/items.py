@@ -5,7 +5,8 @@ class WikiArticleItem(scrapy.Item):
     title = scrapy.Field()
 
 
-class ArticleStatItem(scrapy.Item):
-    title = scrapy.Field()
-    stats = scrapy.Field()
+class BrokenLinkItem(scrapy.Item):
+    article_url = scrapy.Field()
+    link = scrapy.Field()
+    status = scrapy.Field()
     

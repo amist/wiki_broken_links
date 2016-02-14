@@ -21,8 +21,10 @@ class WikiArticlesSpider(scrapy.Spider):
 #             print link
 #             print title
             item = WikiArticleItem()
+#            item['title'] = title[0].encode('utf-8')
             item['title'] = title[0]
             yield item
+            
             
         self.log('searching next page')
 #        for a in response.xpath("//a[contains(text(), 'Next page')]"):
